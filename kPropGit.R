@@ -24,7 +24,7 @@ x <- rnorm(1000, mean, std)*(filter(pitDat, ï..Name==startingPitcher) %>%      
                                dplyr::select(TBF.GS) %>% unlist)
 
 ## PLOT ##
-hist(x, main = paste("Distribution of K's:", startingPitcher))                        ##Create a histogram of pitchers strikeout distribution over the course of one outing
+hist(x, main = paste(startingPitcher, "vs", oppTeam))                                 ##Create a histogram of pitchers strikeout distribution over the course of one outing
 
 ## TOTALS ##
 kProb <- mean(x > 7)                                                                  ##Calculate the probability of the pitcher throwing more than 4 Ks.
