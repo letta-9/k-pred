@@ -16,9 +16,9 @@ oppTeam <- "MIN" # User input opponent
 # Identify handedness of the starting pitcher
 # Read .csv file of opponent lineup that contains batters' handeness and 2021 K% L/R splits
 
-pitcherRates <- read.csv("bosPitchers.csv") %>% filter(PITCHER == pitcher)
+pitcherRates <- read.csv("BOS Pitchers.csv") %>% filter(PITCHER == pitcher)
 projTBF <- round(pitcherRates %>% dplyr::select(TBF) %>% unlist, 2)
-hand <- read.csv("bosPitchers.csv") %>% filter(PITCHER == pitcher) %>% dplyr::select(HND) %>% unlist 
+hand <- read.csv("BOS Pitchers.csv") %>% filter(PITCHER == pitcher) %>% dplyr::select(HND) %>% unlist 
 lineup <- read.csv(paste(oppTeam,"Batters.csv"))
 
 
